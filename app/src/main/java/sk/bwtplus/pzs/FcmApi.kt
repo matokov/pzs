@@ -3,7 +3,7 @@ package sk.bwtplus.pzs
 import retrofit2.http.Body
 import retrofit2.http.POST
 
-interface PzsApi {
+interface FcmApi {
 
     @POST("/send")
     suspend fun sendMessage(

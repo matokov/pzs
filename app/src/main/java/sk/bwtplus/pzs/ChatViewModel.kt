@@ -20,7 +20,7 @@ class ChatViewModel: ViewModel() {
     var state by mutableStateOf(ChatState())
         private set
 
-    private val api: PzsApi = Retrofit.Builder()
+    private val api: FcmApi = Retrofit.Builder()
         .baseUrl("http://10.0.2.2:8080/") // emulator IP
         .addConverterFactory(MoshiConverterFactory.create())
         .build()
