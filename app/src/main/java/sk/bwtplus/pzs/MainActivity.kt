@@ -13,6 +13,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import sk.bwtplus.pzs.message.ChatScreen
+import sk.bwtplus.pzs.message.ChatViewModel
 import sk.bwtplus.pzs.ui.theme.PzsTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,13 +32,13 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val state = viewModel.state
                     if(state.isEnteringToken) {
-                        EnterTokenDialog(
+                        TokenScreen(
                             token = state.remoteToken,
                             onTokenChange = viewModel::onRemoteTokenChange,
                             onSubmit = viewModel::onSubmitRemoteToken
                         )
                     } else {
-                        ChatScreen(
+                        ChatScreen (
                             messageText = state.messageText,
                             onMessageSend = {
                                 viewModel.sendMessage(isBroadcast = false)

@@ -1,7 +1,8 @@
-package sk.bwtplus.pzs
+package sk.bwtplus.pzs.message
 
 import retrofit2.http.Body
 import retrofit2.http.POST
+import sk.bwtplus.pzs.SendMessageDto
 
 interface FcmApi {
 

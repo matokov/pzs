@@ -1,4 +1,4 @@
-package sk.bwtplus.pzs
+package sk.bwtplus.pzs.message
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -13,6 +13,8 @@ import retrofit2.HttpException
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
+import sk.bwtplus.pzs.NotificationBody
+import sk.bwtplus.pzs.SendMessageDto
 import java.io.IOException
 
 class ChatViewModel: ViewModel() {
